@@ -1,0 +1,55 @@
+{
+  "ps": [
+    {
+      "id": "1",
+      "nama": "PlayStation 5",
+      "status": "Tersedia",
+      "tipe": "PS5 Digital",
+      "harga": 15000
+    },
+    {
+      "id": "2",
+      "nama": "PlayStation 4",
+      "status": "Tersedia",
+      "tipe": "PS4 Slim",
+      "harga": 10000
+    },
+    {
+      "id": "3",
+      "nama": "PlayStation 3",
+      "status": "Disewa",
+      "tipe": "PS3 Fat",
+      "harga": 8000
+    }
+  ],
+  "pemesanan": [
+    {
+      "id": "e112",
+      "namaPenyewa": "faiz",
+      "tanggal": "2025-07-08",
+      "waktu": "04:41"
+    },
+    {
+      "id": "b64e",
+      "namaPenyewa": "zikri",
+      "tanggal": "2025-07-17",
+      "waktu": "03:48"
+    },
+    {
+      "id": "3f97",
+      "namaPenyewa": "zaki",
+      "psId": "1",
+      "psNama": "PlayStation 5",
+      "tanggal": "2025-07-05",
+      "waktu": "00:54"
+    },
+    {
+      "id": "a837",
+      "namaPenyewa": "sandi",
+      "psId": "1",
+      "psNama": "PlayStation 5",
+      "tanggal": "2025-07-09",
+      "waktu": "06:18"
+    }
+  ]
+}
