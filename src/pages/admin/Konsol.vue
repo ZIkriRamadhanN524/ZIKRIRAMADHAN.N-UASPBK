@@ -118,63 +118,178 @@ async function deleteKonsol(id) {
 
 <style scoped>
 .admin-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f8fafc;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 h2 {
-    text-align: center;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  font-size: 2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #4361ee, #3a0ca3);
+  border-radius: 4px;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #3a3a3a;
+  font-size: 1.3rem;
+}
+
+.form-tambah {
+  background: #ffffff;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 li {
-  background: #f9f9f9;
-  margin-bottom: 15px;
-  padding: 15px;
-  border-radius: 6px;
-  text-align: left;
+  background: #ffffff;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 input, select {
   display: block;
-  margin-bottom: 10px;
-  padding: 8px;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
   width: 100%;
   box-sizing: border-box;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #4361ee;
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
 }
 
 button {
-  margin-top: 5px;
-  margin-right: 10px;
-  padding: 8px 14px;
+  margin-top: 0.5rem;
+  margin-right: 0.75rem;
+  padding: 0.65rem 1.25rem;
   cursor: pointer;
   border: none;
-  border-radius: 5px;
-  display: flex;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
+button[type="submit"] {
+  background-color: #4361ee;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #3a56d4;
+  transform: translateY(-1px);
+}
+
+button[type="button"] {
+  background-color: #f1f5f9;
+  color: #3a3a3a;
+}
+
+button[type="button"]:hover {
+  background-color: #e2e8f0;
+}
 
 .delete-btn {
-  background-color: #dc3545;
+  background-color: #ef4444;
   color: white;
-  display: flex;
 }
 
 .delete-btn:hover {
-  background-color: #b52b39;
+  background-color: #dc2626;
+  transform: translateY(-1px);
 }
 
+hr {
+  border: none;
+  height: 1px;
+  background-color: #e2e8f0;
+  margin: 2rem 0;
+}
 
-.form-tambah {
-  background: #fff;
-  padding: 20px;
-  margin-bottom: 30px;
-  border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+form {
+  display: grid;
+  gap: 1rem;
+}
+
+form button {
+  margin-top: 0.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .admin-container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+  }
+  
+  li {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-container {
+    padding: 1rem;
+  }
+  
+  h2 {
+    font-size: 1.4rem;
+  }
+  
+  button {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-tambah {
+    padding: 1.5rem;
+  }
 }
 </style>

@@ -102,19 +102,162 @@ const pemesanan = {
 
 <style scoped>
 .container {
-  max-width: 500px;
-  margin: auto;
-  padding: 20px;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  animation: fadeInUp 0.5s ease-out;
 }
+
 h2 {
-    text-align: center;
+  text-align: center;
+  color: #1a1a1a;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #4361ee, #3a0ca3);
+  border-radius: 4px;
 }
 
 .detail-box {
-  background: #f8f8f8;
-  padding: 15px;
-  margin-bottom: 20px;
-  border-radius: 6px;
-  border: 1px solid #ddd;
+  background: #f8fafc;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  border-left: 4px solid #4361ee;
+}
+
+.detail-box p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #2d3748;
+}
+
+.detail-box strong {
+  color: #1a1a1a;
+  min-width: 120px;
+  display: inline-block;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f9fafb;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4361ee;
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+  background-color: #ffffff;
+}
+
+input[type="date"],
+input[type="time"] {
+  position: relative;
+  padding-right: 1rem;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 0;
+  padding: 0.5rem;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+button {
+  background: linear-gradient(135deg, #4361ee, #3a0ca3);
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #3a56d4, #2f0b8a);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+    margin: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1.25rem;
+    margin: 1rem;
+    border-radius: 12px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  margin-bottom: 1rem;
+  }
+  
+  .detail-box {
+    padding: 1rem;
+  }
+  
+  .detail-box p {
+    font-size: 1rem;
+  }
+  
+  input {
+    padding: 0.8rem;
+  }
 }
 </style>
